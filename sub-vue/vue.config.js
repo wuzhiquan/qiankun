@@ -5,7 +5,7 @@
 const port = 5052;
 const { name } = require('../package.json')
 module.exports = {
-  publicPath: "/sub-vue",
+  publicPath: "/subapp/sub-vue",
   devServer: {
     port,
     headers: {
