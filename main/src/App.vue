@@ -27,7 +27,13 @@ export default {
       this.current = item.activeRule
       history.pushState(null, item.activeRule, item.activeRule) // 没引入路由，所以不能用路由切换
     },
-  }
+  },
+  created() {
+    const path = window.location.pathname
+    if (this.microApps.findIndex(item => item.activeRule === path) >= 0) {
+      this.current = path
+    }
+  },
 }
 </script>
 
@@ -50,12 +56,13 @@ html, body{
 .sub-apps {
   list-style: none;
   margin: 0;
+  overflow: hidden;
 }
 .sub-apps li{
   list-style: none;
-  display: inline-block;
   padding: 0 20px;
   cursor: pointer;
+  float: left;
 }
 .sub-apps li.active {
   color: #42b983;
