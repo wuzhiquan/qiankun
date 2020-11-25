@@ -4,7 +4,7 @@
  */
 module.exports = {
   devServer: {
-    port: 5050,
+    port: 5500,
   },
   chainWebpack: config => {
     config.plugin('html')

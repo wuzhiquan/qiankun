@@ -34,4 +34,6 @@ export async function mount(props) {
 }
 export async function unmount() {
   install.$destroy();
+  install.$el.innerHTML = ""; // 子项目内存泄露问题
+  install = null;
 }
