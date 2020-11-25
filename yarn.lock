@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@babel/runtime@^7.10.5", "@babel/runtime@^7.7.2":
+  version "7.12.5"
+  resolved "http://npm.wisefly.cn:4873/@babel%2fruntime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha1-QQ5+SHRB4bNgwpvnFdhw2bmFiC4=
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "http://npm.wisefly.cn:4873/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -154,6 +161,13 @@ hosted-git-info@^2.1.4:
   resolved "http://npm.wisefly.cn:4873/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
   integrity sha1-dTm9S8Hg4KiVgVouAmJCCxKFhIg=
 
+import-html-entry@^1.9.0:
+  version "1.10.0"
+  resolved "http://npm.wisefly.cn:4873/import-html-entry/-/import-html-entry-1.10.0.tgz#23092ef650fe5041a7802d8562f5681f0699d657"
+  integrity sha1-Iwku9lD+UEGngC2FYvVoHwaZ1lc=
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "http://npm.wisefly.cn:4873/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -214,6 +228,11 @@ load-json-file@^4.0.0:
     parse-json "^4.0.0"
     pify "^3.0.0"
     strip-bom "^3.0.0"
+
+lodash@^4.17.11:
+  version "4.17.20"
+  resolved "http://npm.wisefly.cn:4873/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha1-tEqbYpe8tpjxxRo1RaKzs2jVnFI=
 
 memorystream@^0.3.1:
   version "0.3.1"
@@ -312,6 +331,17 @@ pify@^3.0.0:
   resolved "http://npm.wisefly.cn:4873/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
 
+qiankun@^2.3.2:
+  version "2.3.2"
+  resolved "http://npm.wisefly.cn:4873/qiankun/-/qiankun-2.3.2.tgz#59b01081ce07f1d6de38d131bc1ec468dd691b75"
+  integrity sha1-WbAQgc4H8dbeONExvB7EaN1pG3U=
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    import-html-entry "^1.9.0"
+    lodash "^4.17.11"
+    single-spa "5.8.1"
+    tslib "^1.10.0"
+
 read-pkg@^3.0.0:
   version "3.0.0"
   resolved "http://npm.wisefly.cn:4873/read-pkg/-/read-pkg-3.0.0.tgz#9cbc686978fee65d16c00e2b19c237fcf6e38389"
@@ -320,6 +350,11 @@ read-pkg@^3.0.0:
     load-json-file "^4.0.0"
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
+
+regenerator-runtime@^0.13.4:
+  version "0.13.7"
+  resolved "http://npm.wisefly.cn:4873/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
+  integrity sha1-ysLazIoepnX+qrrriugziYrkb1U=
 
 resolve@^1.10.0:
   version "1.19.0"
@@ -350,6 +385,11 @@ shell-quote@^1.6.1:
   version "1.7.2"
   resolved "http://npm.wisefly.cn:4873/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha1-Z6fQLHbJ2iT5nSCAj8re0ODgS+I=
+
+single-spa@5.8.1:
+  version "5.8.1"
+  resolved "http://npm.wisefly.cn:4873/single-spa/-/single-spa-5.8.1.tgz#86c2575e297e31d8f06945944ec97e31851a59ae"
+  integrity sha1-hsJXXil+MdjwaUWUTsl+MYUaWa4=
 
 spdx-correct@^3.0.0:
   version "3.1.1"
@@ -413,6 +453,11 @@ supports-color@^5.3.0:
   integrity sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=
   dependencies:
     has-flag "^3.0.0"
+
+tslib@^1.10.0:
+  version "1.14.1"
+  resolved "http://npm.wisefly.cn:4873/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"

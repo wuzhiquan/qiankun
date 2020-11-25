@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="layout-header">
+      <div class="logo">QIANKUN-WUZHIQUAN</div>
+      <ul class="sub-apps">
+        <li v-for="item in microApps" :class="{active: item.activeRule === current}" :key="item.name" @click="goto(item)">{{ item.name }}</li>
+      </ul>
+    </div>
+    <div id="subapp-viewport"></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import microApps from './micro-app'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      microApps,
+      current: '/sub-vue'
+    }
+  },
+  methods: {
+    goto (item) {
+      console.log(item)
+      this.current = item.activeRule
+      history.pushState(null, item.activeRule, item.activeRule) // 没引入路由，所以不能用路由切换
+    },
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html, body{
+  margin: 0 !important;
+  padding: 0;
+}
+.layout-header{
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 50px;
+  position: relative;
+}
+.logo {
+  float: left;
+  margin: 0 50px;
+}
+.sub-apps {
+  list-style: none;
+  margin: 0;
+}
+.sub-apps li{
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.sub-apps li.active {
+  color: #42b983;
+  text-decoration: underline;
 }
 </style>

@@ -2,9 +2,10 @@
  * @Author: wuzhiquan
  * @Date: 2020-11-25
  */
-const port = '5052';
+const port = 5052;
 const { name } = require('../package.json')
 module.exports = {
+  publicPath: "/sub-vue",
   devServer: {
     port,
     headers: {

@@ -1,5 +1,4 @@
 const { name } = require('./package.json');
-console.log(name)
 
 module.exports = {
   webpack: function override(config, env) {
