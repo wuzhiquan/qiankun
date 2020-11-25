@@ -4,14 +4,19 @@ import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
+let prefix = "/";
+if (window.__POWERED_BY_QIANKUN__) {
+  prefix = "/micrApp/sub-vue/";
+}
+
 const routes = [
   {
-    path: "/",
+    path: prefix === "/" ? prefix : "/micrApp/sub-vue",
     name: "Home",
     component: Home
   },
   {
-    path: "/about",
+    path: `${prefix}about`,
     name: "About",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

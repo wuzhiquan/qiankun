@@ -34,5 +34,5 @@ const config = {
 }
 
 registerMicroApps(microApps, config)
-setDefaultMountApp('/sub-vue')
+setDefaultMountApp('/#/micrApp/sub-vue')
 start()

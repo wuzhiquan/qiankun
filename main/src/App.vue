@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       microApps,
-      current: '/sub-vue'
+      current: '/#/micrApp/sub-vue'
     }
   },
   methods: {
@@ -29,7 +29,7 @@ export default {
     },
   },
   created() {
-    const path = window.location.pathname
+    const path = `/${window.location.hash}`;
     if (this.microApps.findIndex(item => item.activeRule === path) >= 0) {
       this.current = path
     }
