@@ -5,6 +5,7 @@
  *    开发环境是子项目运行的地址加端口（注意留意子项目的publicPath，需要保持一致。本例子是纯IP地址加端口，publicPath应为/，vue项目在vue.config.js中配置，react项目在.env.development中配置）
  *    生产环境下需要注意要和发布地址保持一致。本例子发布需要在main中创建subapp，在subapp下分别在创建sub-vue和sub-react，所以地址为http://localhost:5050/subapp/sub-vue/格式
  */
+import store from './store'
 const microApps = [
   {
     name: 'sub-vue',
@@ -24,6 +25,7 @@ const apps = microApps.map(item => {
     container: '#subapp-viewport', // 子应用挂载的div
     props: {
       routerBase: item.activeRule, // 下发基础路由
+      getGlobalState: store.getGlobalState, // 下发getGlobalState方法
     }
   }
 })
