@@ -4,35 +4,33 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <div>
-      从vuex的global module的state： {{ JSON.stringify(user) }}
-    </div>
+    <div>从vuex的global module的state： {{ JSON.stringify(user) }}</div>
     <button @click="update">更新</button>
     <router-view />
   </div>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions } from "vuex";
 
 export default {
   computed: {
     // 通过global获取user的信息
-    ...mapState('global', {
+    ...mapState("global", {
       user: state => state.user
     })
   },
   methods: {
-    ...mapActions('global', ['setGlobalState']),
-    update () {
+    ...mapActions("global", ["setGlobalState"]),
+    update() {
       const obj = {
         user: {
-          name: 'zhangsan'
+          name: "zhangsan"
         }
-      }
-      this.setGlobalState(obj)
+      };
+      this.setGlobalState(obj);
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
