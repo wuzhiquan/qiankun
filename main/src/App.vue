@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       microApps,
-      current: '/#/micrApp/sub-vue'
+      current: ''
     }
   },
   methods: {
@@ -29,6 +29,9 @@ export default {
     },
   },
   created() {
+    // 首先高亮第一个子项目的菜单
+    this.current = microApps[0].activeRule
+    // 根据hash高亮菜单
     const path = `/${window.location.hash}`;
     if (this.microApps.findIndex(item => item.activeRule === path) >= 0) {
       this.current = path

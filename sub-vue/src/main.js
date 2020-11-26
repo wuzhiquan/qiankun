@@ -3,6 +3,7 @@ import App from "./App.vue";
 import routes from "./router";
 import store from "./store";
 import VueRouter from "vue-router";
+import { name } from "../package.json";
 
 Vue.config.productionTip = false;
 
@@ -16,12 +17,12 @@ function render(props = {}) {
   });
   if (window.__POWERED_BY_QIANKUN__) {
     router.beforeEach((to, from, next) => {
-      if(!to.path.includes('/micrApp')) {
-        next({ path: `/micrApp/sub-vue${to.path}` })
+      if(!to.path.includes("/micrApp")) {
+        next({ path: `/micrApp/${name}${to.path}` });
       } else {
-        next()
+        next();
       }
-    })
+    });
   }
   install = new Vue({
     router,

@@ -34,5 +34,6 @@ const config = {
 }
 
 registerMicroApps(microApps, config)
-setDefaultMountApp('/#/micrApp/sub-vue')
+// 默认打开第一个子项目
+setDefaultMountApp(microApps[0].activeRule)
 start()
