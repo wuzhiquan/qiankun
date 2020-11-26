@@ -1,3 +1,10 @@
+import 'whatwg-fetch';
+import 'custom-event-polyfill'; // 如果还报错，需要引入这个
+import 'core-js/stable/promise';
+import 'core-js/stable/symbol';
+import 'core-js/stable/string/starts-with';
+import 'core-js/web/url';
+
 import Vue from 'vue'
 import App from './App.vue'
 import { registerMicroApps, start, setDefaultMountApp } from 'qiankun'
