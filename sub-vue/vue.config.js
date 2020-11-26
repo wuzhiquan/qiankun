@@ -5,7 +5,7 @@
 const port = 5501;
 const { name } = require("../package.json");
 module.exports = {
-  publicPath: "/",
+  publicPath: "./",
   transpileDependencies: ["global-state"],
   devServer: {
     port,
